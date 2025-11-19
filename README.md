@@ -61,7 +61,7 @@ All tasks and session counts are stored locally in your browser using localStora
 
 ## 🧠 Author
 
-Sarvesh S
+L Sathya Sai
 Computer Science Engineering Student
 
 ```
