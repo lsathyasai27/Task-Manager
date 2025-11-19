@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Flow - Pomodoro Timer & Task Manager</title>
+    <meta name="description" content="Stay productive with Focus Flow - a beautiful Pomodoro timer and task manager to boost your focus and get things done">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Focus Flow</h1>
+            <p class="subtitle">Pomodoro timer & task management</p>
+        </header>
+
+        <div class="grid">
+            <!-- Pomodoro Timer -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="timer-modes">
+                        <button class="mode-btn active" data-mode="work">Focus</button>
+                        <button class="mode-btn" data-mode="shortBreak">Short</button>
+                        <button class="mode-btn" data-mode="longBreak">Long</button>
+                    </div>
+
+                    <div class="timer-circle">
+                        <svg class="progress-ring" width="224" height="224">
+                            <circle class="progress-ring-bg" cx="112" cy="112" r="100"></circle>
+                            <circle class="progress-ring-progress" cx="112" cy="112" r="100"></circle>
+                        </svg>
+                        <div class="timer-display">
+                            <span class="timer-time">25:00</span>
+                            <span class="timer-label">Work</span>
+                        </div>
+                    </div>
+
+                    <div class="timer-controls">
+                        <button class="btn btn-primary" id="startPauseBtn">
+                            <span class="btn-icon">▶</span>
+                            Start
+                        </button>
+                        <button class="btn btn-outline" id="resetBtn">
+                            <span class="btn-icon">↻</span>
+                        </button>
+                    </div>
+
+                    <div class="sessions">
+                        <p class="sessions-label">Sessions</p>
+                        <p class="sessions-count">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task Manager -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="task-header">
+                        <h2>Tasks</h2>
+                        <span class="task-counter">0/0</span>
+                    </div>
+
+                    <div class="task-input-group">
+                        <input type="text" id="taskInput" placeholder="Add a task..." class="task-input">
+                        <button class="btn btn-icon" id="addTaskBtn">
+                            <span class="btn-icon">+</span>
+                        </button>
+                    </div>
+
+                    <div class="task-list" id="taskList">
+                        <div class="empty-state">
+                            <p>No tasks yet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
